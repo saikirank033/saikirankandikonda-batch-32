@@ -1,0 +1,10 @@
+.html {
+    background-color: blue;
+    color: green;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 50px;
+    margin: 20px;
+}
