@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <h1> Environment-based Sending Amount</h1>
+    </head>
+    <body>
+<script>
+    //declaring environment
+    const dev_ENV = "dev";
+    const test_ENV = "test";
+    const stage_ENV = "stage";
+    const proad_ENV = "proad";
+
+    // percentage environment
+    const dev_ENV_PER = 0.10;
+    const test_ENV_PER = 0.20;
+    const stage_ENV_PER = 0.30;
+    const proad_ENV_PER = 0.05;
+
+    var environment = "dev";
+    var sendingAmount;
+    const Amount = 200;
+    if (environment === "dev") {
+            sendingAmount = Amount + (Amount * dev_ENV_PER);  
+        } else if (environment === "test") {
+            sendingAmount = Amount + (Amount * test_ENV_PER);  
+        } else if (environment === "stage") {
+            sendingAmount = Amount + (Amount * stage_ENV_PER);  
+        } else if (environment === "proad") {
+            sendingAmount = Amount + (Amount * proad_ENV_PER);  
+        } else {
+            
+        }
+        console.log("Sending Amount: " + sendingAmount);
+</script>
+    </body>
+</html>
