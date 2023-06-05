@@ -1,0 +1,40 @@
+<html>
+
+<body>
+    <div id="Hobbies"> </div>
+
+    <div id="addHobby"></div>
+    <div id="delHobby"></div>
+    <script>
+        let Hobbies = ["playing games","watching movies","exploring new things"];
+       
+
+
+        function getAllHobies() {
+            return Hobbies;
+        }
+
+
+        function addHobby(newElement) {
+            Hobbies.push(newElement);
+           
+          return Hobbies;
+
+        }
+        function delHobby(delElement) {
+            let index = Hobbies.indexOf(delElement);
+            Hobbies.splice(index, 1);
+            return Hobbies
+        }
+
+        console.log("List of Hobby:");
+        console.log(getAllHobies())
+        console.log("Added new hobby ('Driving') ")
+        console.log(addHobby("Driving"))
+        console.log("Deleted hobby ('exploring new things') ")
+        console.log(delHobby("exploring new things"))
+
+    </script>
+</body>
+
+</html>
