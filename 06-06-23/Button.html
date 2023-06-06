@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <body>
+       <head>
+    <h1>Profile Information</h1>    
+    </head>
+    <!-- <form action=" "> -->
+       
+ 
+            <label id="Fname">Firstname: </label>
+            <div id="a"><input type="text" id="Firstname" name="Firstname"><br></div>
+           
+            <label id="Lname">Lastname: </label>
+           <div id="b"> <input type="text" id="Lastname" name="Lastname"><br></div>
+           
+            <label id="DoB">DateofBirth: </label>
+           <div id="c"> <input type="text" id="DateofBirth" name="DateofBirth"><br></div> 
+           
+            <label id="Mid">Mailid: </label>
+           <div id="d"> <input type="text" id="Mailid" name="Mailid"><br></div>
+           
+            <label id="Con.no">Contactno: </label>
+            <div id="e"><input type="text" id="Contactno" name="Contactno"><br></div>
+
+
+           <div id="f"> <button type="button" onclick="submit();">Submit </button></div>
+          <!-- <input type="submit" value="Submit"> -->
+        <!-- </form> -->
+        <script>
+            let submit = function(){
+                document.getElementById("Fname").innerHTML = document.getElementById("Firstname").value;
+                document.getElementById("a").innerHTML = "";
+                document.getElementById("Lname").innerHTML = document.getElementById("Lastname").value;
+                document.getElementById("b").innerHTML = "";
+                document.getElementById("DoB").innerHTML = document.getElementById("DateofBirth").value;
+                document.getElementById("c").innerHTML = "";
+                document.getElementById("Mid").innerHTML = document.getElementById("Mailid").value;
+                document.getElementById("d").innerHTML = "";
+                document.getElementById("Con.no").innerHTML = document.getElementById("Contactno").value;
+                document.getElementById("e").innerHTML = "";
+                document.getElementById("f").innerHTML = "";
+                
+
+            }
+       
+        </script>
+    </body>
+</html>
