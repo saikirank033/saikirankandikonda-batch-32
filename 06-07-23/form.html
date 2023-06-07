@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <head>
+        <h1>Profile Information</h1>
+    </head>
+
+    <form id="profile" >
+
+        <label id="Fname">Firstname: </label>
+        <div id="a"><input type="text" id="Firstname" name="Firstname"><br></div>
+
+        <label id="Lname">Lastname: </label>
+        <div id="b"> <input type="text" id="Lastname" name="Lastname"><br></div>
+
+        <label id="DoB">DateofBirth: </label>
+        <div id="c"> <input type="date" id="DateofBirth" name="DateofBirth"><br></div>
+
+
+        <label id="Mid">Mail id: </label>
+        <div id="d"> <input type="email" id="Mailid" name="Mail id"><br></div>
+
+        <label id="Con.no">Contactno: </label>
+        <div id="e"><input type="text" id="Contactno" name="Contactno"><br></div>
+
+        <label id="Hob">Hobbies: </label>
+
+        <!-- <div id="c"> <input type="text" id="Hobbies" name="Hobbies"><br></div>  -->
+     <input type="checkbox" name="myCheck" value="Cricket"> <label >Cricket</label><br>
+     <input type="checkbox" name="myCheck" value="Reading"> <label >Reading</label><br>
+     <input type="checkbox" name="myCheck" value="volleyball"> <label >volleyball</label><br>
+     <input type="checkbox" name="myCheck" value="listening music"> <label >listening music</label>
+
+
+     <br>
+        <button>Submit </button>
+    </form>
+    <p id="demo"></p>
+
+    <p id="test"></p>
+    <div id="f"> </div>
+    <script>
+        
+        const prof=document.getElementById("profile")
+        
+        prof.addEventListener("submit", (event) => {
+            event.preventDefault()
+            let s = "";
+            s = s + document.getElementById("Firstname").value + "<br>";
+
+            s = s + document.getElementById("Lastname").value + "<br>";
+
+            s = s + document.getElementById("DateofBirth").value + "<br>";
+
+            s = s + document.getElementById("Mailid").value + "<br>";
+
+            s = s + document.getElementById("Contactno").value + "<br>";
+            
+            var checkboxes =document.getElementsByName('myCheck');
+            var result = "";
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    result += checkboxes[i].value+" ";
+                }
+            }
+            s= s+result
+            
+
+            //s = s + document.getElementById("Hobbies").value + "<br>";
+
+            document.getElementById("test").innerHTML = s;
+
+        
+        })
+
+    </script>
+</body>
+
+</html>

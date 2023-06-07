@@ -4,7 +4,7 @@
        <head>
     <h1>Profile Information</h1>    
     </head>
-    <!-- <form action=" "> -->
+ 
        
  
             <label id="Fname">Firstname: </label>
@@ -24,21 +24,22 @@
 
 
            <div id="f"> <button type="button" onclick="submit();">Submit </button></div>
-          <!-- <input type="submit" value="Submit"> -->
-        <!-- </form> -->
+           <p id="test"></p>
+         
         <script>
             let submit = function(){
-                document.getElementById("Fname").innerHTML = document.getElementById("Firstname").value;
-                document.getElementById("a").innerHTML = "";
-                document.getElementById("Lname").innerHTML = document.getElementById("Lastname").value;
-                document.getElementById("b").innerHTML = "";
-                document.getElementById("DoB").innerHTML = document.getElementById("DateofBirth").value;
-                document.getElementById("c").innerHTML = "";
-                document.getElementById("Mid").innerHTML = document.getElementById("Mailid").value;
-                document.getElementById("d").innerHTML = "";
-                document.getElementById("Con.no").innerHTML = document.getElementById("Contactno").value;
-                document.getElementById("e").innerHTML = "";
-                document.getElementById("f").innerHTML = "";
+                let s="";
+                s=s+document.getElementById("Firstname").value+"<br>";
+            
+                s=s+document.getElementById("Lastname").value+"<br>";
+            
+                s=s+document.getElementById("DateofBirth").value+"<br>";
+                
+                s =s+ document.getElementById("Mailid").value+"<br>";
+                
+                s =s+ document.getElementById("Contactno").value+"<br>";
+                
+                document.getElementById("test").innerHTML = s;
                 
 
             }
