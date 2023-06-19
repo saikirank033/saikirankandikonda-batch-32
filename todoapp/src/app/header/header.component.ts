@@ -7,14 +7,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   operation:String = "LogIn";
-
-
+  login:boolean=true
+  SignUp:boolean=false
   constructor() { }
 
   ngOnInit() {
   }
-  LoginState() {
-    this.operation =  (this.operation=="LogIn") ? "Logout" : "LogIn" ;
+  SignUpState(){
+    this.login=false
+    this.SignUp=true
   }
+  LoginState() {
+    // this.operation =  (this.operation=="LogIn") ? "LogOut" : "LogIn" ;
+    this.login=true
+    this.SignUp=false
+  }
+  userinfo= {
+Firstname: "",
+Lastname:"",
+Emailid:"",
+DateofBirth:"",
+Password:"",
+Contact:""
+
+  }
+
+  
+
 
 }

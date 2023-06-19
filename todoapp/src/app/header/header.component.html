@@ -4,10 +4,10 @@
       <button class="btn-check">Profile</button>
     </li>
     <li>
-      <button class="btn-check">Contact</button>
+      <button class="btn-check" (click)="SignUpState()">SignUp</button>
     </li>
     <li>
-      <button class="btn-check" (click)="LoginState()">{{operation}}</button>
+      <button class="btn-check" (click)="LoginState()">LogIn</button>
     </li>
   </ul>
 
@@ -15,4 +15,26 @@
     <input type="text" placeholder="Search..." />
     <button type="submit">Search</button>
   </div>
+</div> 
+
+<div *ngIf="SignUp">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value=""><br>
+  <label for="email">Email id:</label><br>
+  <input type="text" id="email" name="email" value=""><br>
+  <label for="dob">Date of Birth:</label><br>
+  <input type="text" id="dob" name="dob" value=""><br>
+  <label for="pwd">Password:</label><br>
+  <input type="text" id="pwd" name="pwd" value=""><br>
+  <label for="con">Contact:</label><br>
+  <input type="text" id="con" name="con" value=""><br>
 </div>
+
+<div *ngIf="login">
+  <label for="email">Email id:</label><br>
+  <input type="text" id="email" name="email" value=""><br>
+  <label for="pwd">Password:</label><br>
+  <input type="text" id="pwd" name="pwd" value=""><br>
+  </div>
